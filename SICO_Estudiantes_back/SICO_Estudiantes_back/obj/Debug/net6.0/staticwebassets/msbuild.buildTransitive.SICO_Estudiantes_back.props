@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../buildMultiTargeting/SICO_Estudiantes_back.props" />
+</Project>

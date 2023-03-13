@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/SICO_Estudiantes_back.props" />
+</Project>
