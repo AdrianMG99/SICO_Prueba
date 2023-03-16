@@ -1,0 +1,39 @@
+<div>
+  <div class="modal-content modalCursos">
+    <div class="modal-header">
+      <h3 class="tituloCursosDisponibles">Cursos Inscritos</h3>
+    </div>
+    <div class="modal-body">
+      <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Titulo</th>
+          <th scope="col">Descripcion</th>
+          <th scope="col">Duracion</th>
+          <th scope="col">Docente</th>
+          <th scope="col">Eliminar curso</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <ng-template ngFor let-curso [ngForOf]="cursosDisponibles" let-i="index">
+          <tr>
+            <th scope="row">{{i+1}}</th>
+            <td>{{curso.titulo}}</td>
+            <td>{{curso.descripcion}}</td>
+            <td>{{curso.duracion}}</td>
+            <td>{{curso.nombre_Docente + ' ' + curso.apellido_Docente}}</td>
+            <td type="button">
+              <button type="button" class="btn btn-danger btnEliminarCurso" (click)="eliminarCurso(curso.id)">
+                Eliminar
+              </button>
+            </td>
+          </tr>
+        </ng-template>
+      </tbody>
+    </table>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,29 @@
+.estudiantesContainer {}
+
+.modalCursos {
+  border: 2px solid;
+  border-radius: 8px;
+  position: absolute;
+  top: 100px;
+  left: 20%;
+  background: #ffffff;
+  width: fit-content;
+  height: fit-content;
+}
+
+.btn_cerrar_CD{
+  border: 1px solid;
+  border-radius: 20px;
+  position: absolute;
+  top: 110px;
+  right: 18%;
+  z-index: 3;
+}
+
+.btnEliminarCurso {
+  z-index: 3;
+}
+
+.tituloCursosDisponibles {
+  padding-left: 45%;
+}

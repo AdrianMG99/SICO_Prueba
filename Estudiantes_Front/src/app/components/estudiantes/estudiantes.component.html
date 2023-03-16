@@ -1,0 +1,41 @@
+<div class="estudiantesContainer">
+    <div class="estudiantesLista">
+      <h1>ESTUDIANTES SICO</h1>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Email</th>
+            <th scope="col">Ver cursos Inscritos</th>
+            <th scope="col">Inscribir nuevo curso</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let estudiante of estudiantes; index as i">
+              <th scope="row">{{i+1}}</th>
+              <td>{{estudiante.nombre}}</td>
+              <td>{{estudiante.apellido}}</td>
+              <td>{{estudiante.email}}</td>
+              <td>
+                <button type="button"
+                 class="btn btn-info"
+                 (click)="openModalCursosDisponibles(estudiante.identificacion)"
+                >
+                Ver
+                </button>
+              </td>
+              <td>
+                <button type="button"
+                 class="btn btn-success"
+                 (click)="openModalCursosEstudiante(estudiante.identificacion)">
+                Inscribir
+                </button>
+              </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
